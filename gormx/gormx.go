@@ -65,7 +65,6 @@ func (opt *option) WithLogName(name string) OptionFunc {
 var Client *gorm.DB
 
 func InitGorm(dbType, user, pass, host, port, dbName string, optFunc ...OptionFunc) {
-	logx.NewLoggerOption()
 	opt := &option{}
 	for _, f := range optFunc {
 		if f != nil {
